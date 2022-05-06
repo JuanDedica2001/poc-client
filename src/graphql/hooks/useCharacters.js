@@ -18,4 +18,5 @@ export const useCharacters = (page) => {
     characters,
     loading,
     error
-  }}
+  }
+}

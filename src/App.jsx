@@ -1,6 +1,6 @@
 import {ApolloClient, ApolloProvider, InMemoryCache} from '@apollo/client';
+import { AppRouter } from './router/AppRouter';
 import './App.css'
-import { Characters } from './components/Characters';
 
 const client = new ApolloClient({
   uri: 'https://rickandmortyapi.com/graphql',
@@ -14,8 +14,10 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <div>
-        <h1>GraphQL</h1>
-        <Characters />
+        <h1 style={{
+          textAlign: 'center',
+        }} >GraphQL</h1>
+        <AppRouter />
       </div>
     </ApolloProvider>
   )
