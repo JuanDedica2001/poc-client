@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react';
 import { useQuery } from '@apollo/client';
 import { GET_CHARACTERS } from '../queries';
 
-export const useCharacters = (page) => {
+export const useCharacters = (page = 1, filter) => {
   const [characters, setCharacters] = useState([]);
   const { loading, error, data } = useQuery(GET_CHARACTERS, {
-    variables: { page },
+    variables: { page, filter },
   });
 
   useEffect(() => {

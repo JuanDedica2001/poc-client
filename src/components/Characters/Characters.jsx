@@ -7,7 +7,6 @@ import styles from './character.module.css';
 export const Characters = () => {
   const [page, setPage] = useState(1);
   const { characters, loading } = useCharacters(page);
-
   if (loading) return <p className={styles.loading}>Loading...</p>  
   
   return (

@@ -3,8 +3,8 @@ import { gql } from "@apollo/client";
 
 
 export const GET_CHARACTERS = gql`
-  query characters($page: Int) {
-    characters(page: $page) {
+  query characters($page: Int, $filter: FilterCharacter) {
+    characters(page: $page, filter: $filter) {
       results {
         id
         name
